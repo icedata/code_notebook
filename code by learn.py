@@ -19,6 +19,6 @@ format_dates2 = [datetime.strptime(d,'%Y%m%d') for d in date_list]
 
 import matplotlib.pyplot as plt
 %matplotlib inline
-plt.plot(date_list,result)	#很坐标不会自动缩减，日期会叠起来
+plt.plot(date_list,result)	#横坐标不会自动缩减，日期会叠起来
 plt.plot(format_dates1,result)  #TypeError: float() argument must be a string or a number, not 'Timestamp'
 plt.plot(format_dates2,result) #横坐标会自动缩减，日期可能叠起来，如果叠加，请对x标签进行旋转，加入代码：plt.xticks(rotation=50)
