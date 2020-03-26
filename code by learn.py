@@ -22,3 +22,12 @@ import matplotlib.pyplot as plt
 plt.plot(date_list,result)	#横坐标不会自动缩减，日期会叠起来
 plt.plot(format_dates1,result)  #TypeError: float() argument must be a string or a number, not 'Timestamp'
 plt.plot(format_dates2,result) #横坐标会自动缩减，日期可能叠起来，如果叠加，请对x标签进行旋转，加入代码：plt.xticks(rotation=50)
+
+#itertools.product笛卡尔积，相当于嵌套的for循环
+import itertools
+for i in itertools.product('ABCD', repeat=2):
+	print(i)
+#结果('A','A’）('A','B')等组合
+for i in itertools.product('ABCD', repeat=2):
+	print(i)
+#结果('A',）('B',)('C',)('D',)
